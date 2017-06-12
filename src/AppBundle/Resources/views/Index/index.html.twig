@@ -1,0 +1,143 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}Bienvenue sur le site de voyages !{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/index.css') }}" />
+{% endblock %}
+
+{% block body %}
+    <div class="video-container">
+        <div id="title-container">
+            <div id="logo"></div>
+            <h1>Trouvez les meilleurs guides pour vous aider à visiter leur pays!</h1>
+        </div>
+        {% set r=random(2) %}
+        {% if r==0 %}
+            <video src="{{ asset('video/scuba_diving.mp4') }}" width="100%" loop autoplay="true"></video>
+        {% elseif r==1 %}
+            <video src="{{ asset('video/k2.mp4') }}" width="100%" loop autoplay="true"></video>
+        {% elseif r==2 %}
+            <video src="{{ asset('video/venice.mp4') }}" width="100%" loop autoplay="true"></video>
+        {% endif %}
+    </div>
+    <section>
+        <div class="container-fluid offers-container">
+            <div class="container">
+                <div class="jumbotron">
+                    <h2>Offre spéciale sur de nombreux vols</h2>
+                </div>
+                <div class="media">
+                    <div class="media-left">
+                        <img width="120" class="media-object thumbnail" alt="exclusive offers on flights" src="{{ asset('image/flights-thumbnail.jpg') }}"/>
+                    </div>
+                    <div class="media-body">
+                        Paris - Londres : 10% de réduction sur tous les vols Air France et London Air
+                    </div>
+                </div>
+                <div class="media">
+                    <div class="media-left">
+                        <img width="120" class="media-object thumbnail" alt="exclusive offers on flights" src="{{ asset('image/prague.jpg') }}"/>
+                    </div>
+                    <div class="media-body">
+                        Londres - Prague : vol retour gratuit
+                    </div>
+                </div>
+                <div class="media">
+                    <div class="media-left">
+                        <img width="120" class="media-object thumbnail" alt="exclusive offers on flights" src="{{ asset('image/istanbul.jpg') }}"/>
+                    </div>
+                    <div class="media-body">
+                        Paris - Istanbul : 1ère classe au même prix que la classe standard. Touche tes boules à Istanbul.
+                    </div>
+                </div>
+                <div class="media">
+                    <div class="media-left">
+                        <img width="120" class="media-object thumbnail" alt="exclusive offers on flights" src="{{ asset('image/sydney.jpg') }}"/>
+                    </div>
+                    <div class="media-body">
+                        Paris - Sydney : 5% de réduction sur tous les vols (plus un somalien offert en cadeau*)  <span style="font-size: 12px">*: Dans la mesure d'un stock de somaliens disponible. Livré chez vous par cargo en 48h. cette promotion se termine à la fin du mois.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="container share-experience clearfix">
+                <div class="jumbotron">
+                    <h2>Ils nous font partager leurs expériences !</h2>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                        <img src="{{ asset('image/ocean-thumbnail.jpg') }}" alt="">
+                        <div class="media">
+                            <div class="media-left">
+                                <img width="70" class="media-object thumbnail" alt="exclusive offers on flights" src="{{ asset('image/avatar.png') }}"/>
+                                <div class="caption">
+                                    <p>Thomas<br>38 ans<br>entrepreneur</p>
+                                </div>
+                            </div>
+                            <div class="media-body">
+                                J'ai vécu une expérience incroyable. Arrivé sur place le guide m'attendait déjà.
+                                J'ai pu profiter de sa connaissance des lieux pour visiter des lieux insolites rompant avec les traditionnels sites touristiques.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                        <img src="{{ asset('image/winter-thumbnail.jpg') }}" alt="">
+                        <div class="media">
+                            <div class="media-left">
+                                <img width="70" class="media-object thumbnail" alt="exclusive offers on flights" src="{{ asset('image/avatar.png') }}"/>
+                                <div class="caption">
+                                    <p>Famille Dussard</p>
+                                </div>
+                            </div>
+                            <div class="media-body">
+                                Avec nos enfants nous avions prévu de leur faire découvrir de nouvelles terres. Nous n'avons pas été déçus du voyage. Au contraire.
+                                Nous nous sommes associés à une autre famille qui partait à la même date que nous pour pouvoir obtenir des prix avantageux une
+                                fois sur place. Nous avons pu bénéficier de tarifs groupés notamment pour les musées etc..
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                        <img src="{{ asset('image/sand-thumbnail.jpg') }}" alt="">
+                        <div class="media">
+                            <div class="media-left">
+                                <img width="70" class="media-object thumbnail" alt="exclusive offers on flights" src="{{ asset('image/avatar_woman.png') }}"/>
+                                <div class="caption">
+                                    <p>Marine<br>30 ans<br>Aide-soignante</p>
+                                </div>
+                            </div>
+                            <div class="media-body">
+                                Une façon originale de rencontrer des gens et de pouvoir réduire les frais liés au voyage. Parfait pour les petites bourses.
+                                J'ai choisi de m'adjoindre les services d'une personne habitant sur place pour me servir de guide et je ne regrette pas.
+                                Très hospitalière, elle m'a accueillie à bras ouverts et m'a fait découvrir les endroits insolites. Je repartirai.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="container find-guide">
+                <div class="jumbotron">
+                    <h2>Trouvez les meilleurs guides pour vous aider à visiter leur pays!</h2>
+                    <p>
+                        Faites-vous des amis au-delà des frontières pour une expérience inoubliable.
+                    </p>
+                </div>
+                <div>
+                    Qu'est-ce que le Lorem Ipsum?
+                    Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression.
+                    Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser
+                    un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que
+                    son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et,
+                    plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
